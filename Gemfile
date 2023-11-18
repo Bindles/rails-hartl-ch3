@@ -65,11 +65,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-
-
-
 gem 'minitest'
 gem 'minitest-reporters'
 gem 'guard'
 gem 'guard-minitest'
+gem 'bootstrap-sass'
+gem 'sassc-rails'
