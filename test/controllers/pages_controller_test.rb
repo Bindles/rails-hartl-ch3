@@ -12,8 +12,15 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     #     assert_select "title", "Home | RoR TS"
     # end
     test "should get about" do
-        get pages_about_url
+        get about_url
         assert_response :success
         assert_select "title", "About | RoR TS"
     end
+
+    test "should get contact" do
+        get contact_url
+        assert_response :success
+        assert_select "title", "Contact | RoR TS"
+    end
+
 end

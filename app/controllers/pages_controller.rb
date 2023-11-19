@@ -8,4 +8,12 @@ class PagesController < ApplicationController
 
     end
 
+    def contact 
+
+    end
+    
+    def help
+
+    end
+
 end
