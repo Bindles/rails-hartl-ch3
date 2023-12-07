@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get 'help' => 'pages/help'
   get 'contact' => 'pages#contact'
   get 'signup' => 'users#new'
+  resources :users, param: :name
 end

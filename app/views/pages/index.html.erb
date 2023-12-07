@@ -11,3 +11,39 @@ Tutorial</a>
 <%# link rails image 'rails.svg', url: https://learnenough.s3-us-west-2.amazonaws.com/rails.svg %>
   <%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200"), "https://rubyonrails.org/" %>
   <img alt="Rails logo" width="200px" src="/assets/rails.svg" />
+  <br>
+  <br>
+
+    <!-- ... -->
+  <turbo-frame id="comments">
+  <ul>
+  <li>A comment</li>
+  <li>Another comment</li>
+  </ul>
+  </turbo-frame>
+  <!-- This link will only update the above Turbo Frame -->
+  <a href="/comments" data-turbo-frame="comments">Refresh</a>
+  <!-- ... -->
+<br>
+
+<article data-controller="toggle">
+  <div data-toggle-target="item">
+  This is a thing.
+  </div>
+  <button
+  data-action="click->toggle#toggleItem"
+  data-toggle-class-value="hidden">
+  Toggle the thing!
+  </button>
+</article>
+<br>
+<script>
+export default class extends Controller {
+  static targets = [ "burger", "menu" ]
+  toggle() {
+  this.burgerTarget.classList.toggle("is-active")
+  this.menuTarget.classList.toggle("is-active")
+  }
+}
+</script>
+The burger menu is hook
